@@ -519,5 +519,9 @@ margin-bottom: 0;
         margin: 20px 0;
     }
 }
-
+@media (max-width: 455px){
+    .contactInfo{
+        font-size: 12px;
+    }
+}
 
