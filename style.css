@@ -8,6 +8,13 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+hr.solid {
+    border-top: 3px solid #bbb;
+    width: 1600px;
+    margin: auto;
+    
+  }
+  
 section
 {
     padding: 100px;
@@ -155,6 +162,9 @@ img{
     font-weight: 100;
     font-family: 'Times New Roman', Times, serif; 
 }
+.services{
+    margin-bottom: 50px;
+}
 .services .content
 {   
     display: flex;
@@ -185,7 +195,7 @@ img{
     flex-wrap: wrap;
 }
 .work .slideshow-container .workBx
-{   background-color: #000000;
+{   background-color: #ffffff;
     width: 100%;
     height: 400px;
     padding: 10px;
@@ -224,7 +234,7 @@ img{
     top: 40%;
     width: 50px;
     padding: 10px;
-    color: rgb(255, 255, 255);
+    color: rgb(59, 59, 59);
     font-weight: bold;
     font-size: 50px;
     transition: 0.6s ease;
@@ -245,7 +255,7 @@ img{
   
   /* Caption text */
   .text {
-    color: #f2f2f2;
+    color: #000000;
     font-size: 20px;
     padding: 8px 12px;
     position: absolute;
@@ -303,22 +313,24 @@ img{
 
 .testimonial
 {
-    background: #f7f7f7;
+    background: #fff;
 }
 .testimonial .content{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
 }
 .testimonial .content .testimonialBx
 {
     max-width:calc(50% - 40px);
     padding: 60px 40px;
     margin: 20px;
-    background: #2196f3;
+    background: rgba(240, 240, 240, 0.74);
+
 }
 .testimonial .content .testimonialBx p{
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-style: italic;
     font-size: 16px;
     font-weight: 300;
@@ -326,7 +338,7 @@ img{
 .testimonial .content .testimonialBx h3{
     margin-top: 40px;
     text-align: end;
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-weight: 600;
     font-size: 20px;
     line-height: 1em;
@@ -347,7 +359,7 @@ img{
     flex-direction: column;
 }
 .formBx form h3, 
-.contactInfo{
+.contactInfoBx .text{
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -425,6 +437,12 @@ margin-bottom: 0;
         padding: 20px 50px;
         z-index: 1000;
     }
+    hr.solid {
+        border-top: 3px solid #bbb;
+        width: 700px;
+        margin: auto;
+        
+      }
     .menu{
         position: fixed;
         top:75px;
@@ -510,7 +528,7 @@ margin-bottom: 0;
         max-width: 100%;
         padding: 40px 20px;
         margin: 10px;
-        background: #2196f3;
+        background: rgb(248, 206, 206);
     }
     .testimonial .content .testimonialBx h3{
         margin-top: 20px;       
