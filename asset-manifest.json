@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c8a51cbd.css",
+    "main.js": "/static/js/main.cb1e37da.js",
+    "static/media/img.jpg": "/static/media/img.7ffa1bc60874fbd54293.jpg",
+    "static/media/MoneyBond.png": "/static/media/MoneyBond.ff2f2d94d083da570b7a.png",
+    "static/media/tictactoe.png": "/static/media/tictactoe.e5eafb42f28083364a27.png",
+    "static/media/banner.jpg": "/static/media/banner.b0e2efd6da3f6581277e.jpg",
+    "static/media/todo_app.jpg": "/static/media/todo_app.6a5ad8a06be7d22cddfa.jpg",
+    "static/media/weather_app.png": "/static/media/weather_app.d4066c507da690b7d95b.png",
+    "index.html": "/index.html",
+    "main.c8a51cbd.css.map": "/static/css/main.c8a51cbd.css.map",
+    "main.cb1e37da.js.map": "/static/js/main.cb1e37da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8a51cbd.css",
+    "static/js/main.cb1e37da.js"
+  ]
+}
