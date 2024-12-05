@@ -1,0 +1,12 @@
+.todo {
+    max-width: 70%;
+    height: 700px;
+    overflow: auto;
+}
+.todo-container {
+    gap: 30px;
+}
+.input-group {
+    max-width: 70%;
+    padding-top: 10px;
+}

@@ -1,30 +1,31 @@
 import {useState, useEffect} from 'react';
-import MoneyBond from '../resources/images/MoneyBond.png';
-import TickTacToe from '../resources/images/tictactoe.png';
-import TodoApp from '../resources/images/todo_app.jpg';
-import WeatherApp from '../resources/images/weather_app.png';
-const ImageSlider = () => {
+import TodoApp from './ToDoApp/index.js';
+import MoneyBondImg from '../../resources/images/MoneyBond.png';
+import TickTacToeImg from '../../resources/images/tictactoe.png';
+import TodoAppImg from '../../resources/images/todo_app.jpg';
+import WeatherAppImg from '../../resources/images/weather_app.png';
+const Projects = () => {
     
     const [slideIndex, setSlideIndex] = useState(0);
     const images = [
         {
             name: 'MoneyBond App - KhataBook Clone',
-            imageURL: MoneyBond,
+            imageURL: MoneyBondImg,
             externalURL: 'https://github.com/Triaro/MoneyBond'
         },
         {
             name: 'Tic Tac Toe Game',
-            imageURL: TickTacToe,
+            imageURL: TickTacToeImg,
             externalURL: 'https://github.com/Triaro/TicTacToe'
         },
         {
             name: 'Todo web app (Vue.js)',
-            imageURL: TodoApp,
+            imageURL: TodoAppImg,
             externalURL: 'https://github.com/Triaro/Vue_Todo'
         },
         {
             name: 'Weather app (Vue.js)',
-            imageURL: WeatherApp,
+            imageURL: WeatherAppImg,
             externalURL: 'https://github.com/Triaro/Vue_Weather'
         },
       ];
@@ -50,17 +51,20 @@ const ImageSlider = () => {
     
     return (
       <section className="work" id="work">
-        <div className="heading white">
-            <h2>My Projects</h2>
+        <TodoApp/>
+        <div className="heading white text-center">
+            <h2>More Projects</h2>
         </div>
         <div className="slideshow-container">
-            <div className="workBx mySlides fade">
-                <div className="numbertext">{slideIndex+1} / 4</div>
-                <a href={images[slideIndex].externalURL} target="_blank">
-                    <img src={images[slideIndex].imageURL} style={{width:'100%'}} alt="unavailable"/>
-                </a>             
-                <div className="text">{images[slideIndex].name}</div>
-            </div>
+            {images.map((image, index) => (
+                <div key={index} className={`workBx mySlides ${index === slideIndex ? 'active' : ''}`}>
+                <div className="numbertext">{index + 1} / {images.length}</div>
+                <a href={image.externalURL} target="_blank" rel="noopener noreferrer">
+                    <img src={image.imageURL} style={{ width: '100%' }} alt="Unavailable" />
+                </a>
+                <div className="text">{image.name}</div>
+                </div>
+            ))}
             <a className="prev" onClick={() => previousSlide()}>{'<'}</a>
             <a className="next" onClick={() => nextSlide()}>{'>'}</a>
         </div>
@@ -72,11 +76,11 @@ const ImageSlider = () => {
                 <span className="dot" onClick={() => currentSlide(3)}></span>
                 <span className="dot" onClick={() => currentSlide(4)}></span>
               </div> */}
-          <div className="heading">
+          <div className="heading text-center">
               <a href="#work" className="btn">View More</a>
           </div>
       </section>
     );
 };
 
-export default ImageSlider;
+export default Projects;
