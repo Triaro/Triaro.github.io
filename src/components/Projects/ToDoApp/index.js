@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './todoApp.css';
+import './styles.css';
 const TodoApp = () => {
     const [todos, setTodos] = useState([]);
     const [openInput, setOpenInput] = useState(false);

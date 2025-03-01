@@ -1,0 +1,13 @@
+.games-container {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game{
+    cursor: pointer;
+}
+.games-container .active {
+    color: red!important;
+    transition: all 0.5s ease-in-out;
+}

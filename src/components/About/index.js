@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './about.css';
+import './styles.css';
 import { BoltLoader } from "react-awesome-loaders";
 
 const About = () => {
