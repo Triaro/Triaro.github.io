@@ -1,6 +1,6 @@
 .todo {
     max-width: 70%;
-    height: 700px;
+    height: fit-content;
     overflow: auto;
 }
 .todo-container {
