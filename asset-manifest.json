@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.00bb9e14.css",
-    "main.js": "/static/js/main.d87658bd.js",
+    "main.css": "/static/css/main.14599df5.css",
+    "main.js": "/static/js/main.686b1ec0.js",
     "static/media/img.jpg": "/static/media/img.7ffa1bc60874fbd54293.jpg",
     "static/media/MoneyBond.png": "/static/media/MoneyBond.ff2f2d94d083da570b7a.png",
     "static/media/tictactoe.png": "/static/media/tictactoe.e5eafb42f28083364a27.png",
@@ -9,11 +9,11 @@
     "static/media/todo_app.jpg": "/static/media/todo_app.6a5ad8a06be7d22cddfa.jpg",
     "static/media/weather_app.png": "/static/media/weather_app.d4066c507da690b7d95b.png",
     "index.html": "/index.html",
-    "main.00bb9e14.css.map": "/static/css/main.00bb9e14.css.map",
-    "main.d87658bd.js.map": "/static/js/main.d87658bd.js.map"
+    "main.14599df5.css.map": "/static/css/main.14599df5.css.map",
+    "main.686b1ec0.js.map": "/static/js/main.686b1ec0.js.map"
   },
   "entrypoints": [
-    "static/css/main.00bb9e14.css",
-    "static/js/main.d87658bd.js"
+    "static/css/main.14599df5.css",
+    "static/js/main.686b1ec0.js"
   ]
 }
