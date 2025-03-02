@@ -1,0 +1,26 @@
+.games-container {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+}
+
+.game{
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+.game:hover {
+    color: #fd3f91;
+}
+.games-container .active {
+    color: #ff2483;
+    text-shadow: -0.1rem 0.1rem 2rem #ff65bd, 0.2rem 0.1rem 2rem #ff65bd,
+      0 -0.3rem 2rem #ff2483;
+}
+.game-container {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

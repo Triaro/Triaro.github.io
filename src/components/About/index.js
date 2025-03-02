@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './about.css';
+import './styles.css';
 import { BoltLoader } from "react-awesome-loaders";
 
 const About = () => {
@@ -7,7 +7,7 @@ const About = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoader(false);
-        }, 3000);
+        }, 2000);
     }, []);
     return <div className="about" id="about">
         <div className="header">

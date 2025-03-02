@@ -1,7 +1,7 @@
 .todo {
     max-width: 70%;
-    height: 700px;
-    overflow: auto;
+    height: fit-content;
+    overflow: hidden;
 }
 .todo-container {
     gap: 30px;
