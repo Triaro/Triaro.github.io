@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import BoxGame from './BoxGame';
 import './styles.css';
+import MemoryCheck from './MemoryCheck';
 const Games = () => {
     const [activeGame, setActiveGame] = useState({
-        id: 1,
-        title: 'Magical Boxes',
-        component: <BoxGame/>
-    });
+            id: 2,
+            title: 'Memory Check',
+            component: <MemoryCheck/>
+        });
     const gamesList = [
         {
             id: 1,
@@ -15,8 +16,8 @@ const Games = () => {
         },
         {
             id: 2,
-            title: 'Tic Tac Toe',
-            component: <BoxGame/>
+            title: 'Memory Check',
+            component: <MemoryCheck/>
         }
     ];
     const showGame = () => {
@@ -34,7 +35,9 @@ const Games = () => {
                 <span>{game.id} - </span>{game.title}
             </div>
         })}
-        {showGame()}
+        <div className="game-container" style={{ marginTop: '20px'}}>
+            {showGame()}
+        </div>
     </div>
 };
 

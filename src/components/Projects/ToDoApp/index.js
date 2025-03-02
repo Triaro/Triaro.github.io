@@ -13,7 +13,7 @@ const TodoApp = () => {
         setTodos(JSON.parse(localStorage.getItem('todos')) || []);
         setTimeout(() => {
             setLoader(false);
-        }, 200);
+        }, 1000);
         // setLoader(true);
         // fetch('https://jsonplaceholder.typicode.com/todos')
         //     .then(res => res.json())
@@ -66,17 +66,17 @@ const TodoApp = () => {
                 <h2>Todo App</h2>
             </div>
             <div className="todo d-flex flex-column">
-                {loader && <div className="spinner-border text-primary" role="status">
+                {loader
+                    ? <div className="spinner-border text-primary" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </div>
-                }
-                {todos?.length!=0 && todos?.map((todo, index) => (
-                    <div key={index} className="todo-container d-flex justify-content-between">
-                        <div className="todo-name">{todo.title}</div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value={todo.completed} onChange={e=>checkUpdated(e, todo.id)} id="flexCheckChecked" checked={todo.completed}/>
+                    : todos?.length!=0 && todos?.map((todo, index) => (
+                        <div key={index} className="todo-container d-flex justify-content-between">
+                            <div className="todo-name">{todo.title}</div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value={todo.completed} onChange={e=>checkUpdated(e, todo.id)} id="flexCheckChecked" checked={todo.completed}/>
+                            </div>
                         </div>
-                    </div>
                 ))}
             </div>
             {openInput && <div className="input-group mb-3">

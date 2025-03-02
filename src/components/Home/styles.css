@@ -1,6 +1,5 @@
 .sign {   
-    font-size: 5rem;
-    letter-spacing: 2;   
+    font-size: 5rem; 
     font-family: "Clip"; 
     color: #ffe6ff;
     text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
@@ -8,7 +7,44 @@
       0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
     animation: shine 2s forwards, flicker 3s infinite;
   }
-  
+
+  .btn{
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  .btn:hover{
+    background-color: rgb(129, 0, 0);
+  }
+  .game-btn-container {
+    position: relative;
+  }
+  .games-btn{
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+    animation: bounce 3s ease-in-out infinite;
+    margin-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+   
   @keyframes blink {
     0%,
     22%,
@@ -178,34 +214,17 @@
     }
   }
 
-  .btn{
-    position: relative;
-    background: #2196f3;
-    display: inline-block;
-    color: #fff;
-    margin-top: 20px;
-    padding: 10px 30px;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-weight: 500;
-  }
-  .btn:hover{
-    background-color: rgb(129, 0, 0);
-  }
-  .games-btn{
-    position: relative;
-    display: inline-block;
-    color: #fff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-    animation: shine 2s forwards, flicker 3s infinite;
-    margin-top: 20px;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-weight: 500;
+  @keyframes bounce {
+    0% {
+      opacity: 0%;
+      top: 20px;
+    }
+    50% {
+      opacity: 100%;
+      top: 0px;
+    }
+    100% {
+      opacity: 0%;
+      top: 20px;
+    }
   }

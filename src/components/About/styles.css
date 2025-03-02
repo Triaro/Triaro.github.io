@@ -4,10 +4,17 @@
 }
 .about .header {
     height: 450px;
+    padding: 0px 30px;
 }
 .about .loader {
+    position: absolute;
     height: 300px;
     width: 400px;
+    animation: moveRight 2s infinite;
+}
+.loaderbolt {
+    position: relative;
+    transition: all 0.5s ease-in-out;
 }
 .about img {
     width: 300px;
@@ -16,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    animation: fadeIn 5s;
 }
 .about .title {
     display: flex;
@@ -31,10 +39,9 @@
   max-width: 45%;
   animation: fadeIn 1s;
 }
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+.content {
+    animation: fadeIn 5s;
+}
 .education-container {
     display: flex;
     flex-direction: column;
@@ -47,4 +54,18 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes moveRight {
+    0% {
+        left: 50%;
+    }
+    100% {
+        left: 80%;
+    }
 }

@@ -58,7 +58,7 @@ export default function BoxGame() {
                 );
             })}
         </div>
-        Click on all the boxes!
+        <span className="hover-text">Click on all the boxes!</span>
     </div>
   );
 }
