@@ -224,7 +224,7 @@ hr.solid {
 }
 
 /* Caption text */
-.text {
+.slideshow-container .text {
   color: #FFF;
   font-size: 20px;
   position: absolute;

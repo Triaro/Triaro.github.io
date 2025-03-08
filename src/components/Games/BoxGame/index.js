@@ -4,18 +4,19 @@ import "./styles.css";
 
 export default function BoxGame() {
   const [boxes, setBoxes] = useState(BOXES);
+  const [caption, setCaption] = useState('Click on all the boxes!');
   const [clickedBoxes, setClickedBoxes] = useState(new Set([]));
+  const [boxTimeout, setBoxTimeout] = useState(false);
   useEffect(() => {
     if (clickedBoxes.size === boxes.length) {
       clearAll();
     }
   }, [clickedBoxes]);
   const clearAll = () => {
+    setBoxTimeout(true);
     setTimeout(() => {
-      console.log(clickedBoxes);
       let tempClickedBoxes = [...clickedBoxes];
       let clickedBox = tempClickedBoxes.shift();
-      console.log(tempClickedBoxes);
       setClickedBoxes((prev) => {
         prev.delete(clickedBox);
         return prev;
@@ -30,11 +31,14 @@ export default function BoxGame() {
           })
         );
         clearAll();
+      } else {
+        setBoxTimeout(false);
+        setCaption('Click on all the boxes!');
       }
     }, 500);
   };
   const handleClick = (e) => {
-    if (e.target.className === "box") {
+    if (e.target.className === "box" && !boxTimeout) {
       let finalBoxes = boxes.map((box) => {
         if (!box.isActive && box.id.toString() === e.target.id) {
           setClickedBoxes((prev) => new Set([...prev, box]));
@@ -43,6 +47,8 @@ export default function BoxGame() {
         return box;
       });
       setBoxes(finalBoxes);
+    } else if (e.target.className === "box" && boxTimeout) {
+      setCaption('Wait for the animation to finish :)')
     }
   };
   return (
@@ -58,7 +64,7 @@ export default function BoxGame() {
                 );
             })}
         </div>
-        <span className="hover-text">Click on all the boxes!</span>
+        <span className="hover-text">{caption}</span>
     </div>
   );
 }
